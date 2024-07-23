@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop Login Page</title>
+    <link rel="stylesheet" href="coffeehouse.css">
+    <script>
+       function validateform() {
+           var name = document.Login.mobno.value;
+           var password = document.Login.password.value;
+           
+           if (name === "" || password === "") {
+               alert("Fields can't be empty");
+               return false;
+           } else {
+               if (isNaN(name)) {
+                   alert("Mobile number must be numeric");
+                   return false;
+               }
+               if (password.length < 4) {
+                   alert("Password must be at least 4 characters long");
+                   return false;
+               }
+               if (name === "1234567890" && password === "1234") {
+                   window.location.href = "coffeesite.html";
+                   return false;
+               } else {
+                   alert("Invalid mobile number or password");
+                   return false;
+               }
+           }
+       }
+    </script>
+</head>
+<body>
+    <h1 class="gfx">Coffee Club</h1>
+    <form name="Login" method="post" action="" onsubmit="return validateform()" class="form">
+        <input type="text" name="mobno" placeholder="Enter Your Mobile Number" /><br><br>
+        <input type="password" name="password" placeholder="Enter Your Password"/><br><br>        
+        <input type="submit" value="LOGIN">
+        <input type="button" value="CANCEL" onclick="window.location.href='coffeeshoploginpage.htm';"><br><br>
+        <a href="signup.htm">Sign Up</a><br><br>
+        <a href="forgot.htm">Forgot Password</a>
+    </form>
+</body>
+</html>

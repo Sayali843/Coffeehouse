@@ -1,0 +1,214 @@
+/* Adding Google Fonts for better typography */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;600&display=swap');
+
+body {
+    background-image: url('background9.png.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Styling the header */
+header {
+    background: linear-gradient(45deg, rgba(165, 42, 42, 0.8), rgba(255, 165, 0, 0.8));
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-family: 'Lobster', cursive;
+    margin: 0;
+    font-size: 3em;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+#hero {
+    font-style: italic;
+    font-weight: bold;
+    color: whitesmoke;
+    text-align: center;
+    font-size: larger;
+    padding: 50px 0;
+}
+
+#hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.contactus, .menu, .menu-item, .about {
+    background-color: rgba(255, 0, 0, 0.247);
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    border: none; /* Ensure no border is applied */
+}
+
+.contactus:hover, .menu:hover, .menu-item:hover, .about:hover {
+    transform: translateY(-10px);
+}
+
+.contactus h2, .menu h2, .about h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: rgba(165, 42, 42, 0.8);
+    padding: 10px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image, .gif, .foodie {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.image:hover, .gif:hover, .foodie:hover {
+    transform: scale(1.1);
+}
+
+.img2 {
+    height: 500px;
+    width: 900px;
+    object-fit: cover;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.flexli {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ulFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add {
+    text-align: left;
+    border: 1px solid #ccc;
+    background-color: rgba(165, 42, 42, 0.478);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form {
+    text-align: center;
+    color: black;
+}
+
+.form input[type="text"], .form input[type="password"] {
+    width: 20%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.form input[type="text"]:focus, .form input[type="password"]:focus {
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.form button {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #a52a2a;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.form button:hover {
+    background-color: #8b0000;
+    transform: scale(1.05);
+}
+
+.gfx {
+    background-color: black;
+    font-style: italic;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Adding keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

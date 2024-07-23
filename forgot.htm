@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="coffeehouse.css">
+
+    <script>
+        function validatesignup() {
+            var mobno = document.forms["SignUp"]["mobno"].value;
+            var password1 = document.forms["SignUp"]["password1"].value;
+            var password2 = document.forms["SignUp"]["password2"].value;
+
+            console.log("Mobile Number:", mobno);
+            console.log("Password1:", password1);
+            console.log("Password2:", password2);
+
+            if (mobno === "" || password1 === "" || password2 === "") {
+                alert("Fields can't be empty");
+                return false;
+            } else {
+                if (isNaN(mobno)) {
+                    alert("Mobile number must be numeric");
+                    return false;
+                } else if (password1.length < 4) {
+                    alert("Password must be at least 4 characters long");
+                    return false;
+                } else if (password1 !== password2) {
+                    alert("Passwords must match");
+                    return false;
+                } else {
+                    // Store the new credentials in localStorage
+                    localStorage.setItem('mobno', mobno);
+                    localStorage.setItem('password', password1);
+                    alert("Update successful");
+                    window.location.href = "index.html";
+                    return false; // Prevent form submission to stay on the current page
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1 class="gfx">Coffee Club - Forgot Password</h1>
+    <form name="SignUp" method="post" action="" onsubmit="return validatesignup()" class="form">
+        <input type="text" name="mobno" placeholder="Enter Your Mobile Number" /><br><br>
+        <input type="password" name="password1" id="password1" placeholder="Enter Your Password"/><br><br>
+        <input type="password" name="password2" id="password2" placeholder="Retype Password"/><br><br>     
+        <button type="submit">update password</button>
+        <button type="button" onclick="window.location.href='index.html';">Cancel</button>
+    </form>
+</body>
+</html>
